@@ -283,7 +283,7 @@
 
 ## 2. Today I found out
 
-- - 접근성을 고려하여 마크업하는것이 어려웠다. 문서를 검색해서 속성을 찾아보고 복습해봐야겠다.
+- 접근성을 고려하여 마크업하는것이 어려웠다. 문서를 검색해서 속성을 찾아보고 복습해봐야겠다.
 - 사용자가 어떤 브라우저를 사용하는지 알 수 없는 상황에서, 어떤 브라우저든 지원하기위해 source tag를 여러 개 써서 링크하는것도 video태그를 잘 이용 하는 방법중에 하나인 것 같다.
 - 아이콘을 나타내는 여러 방법을 알게 되었고 좀 더 편한 image sprites  기법도 사용해보고싶다.
 
@@ -292,4 +292,6 @@
 [input mdn문서](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input) 
 
 [HTML5 video 요소의 사용 예](http://craftymind.com/factory/html5video/CanvasVideo.html)
-[track 요소 참고 사이트](http://html5ref.clearboth.org/html5:element:track)
+
+[track 요소 참고 사이트](http://html5ref.clearboth.org/html5:)
+
