@@ -179,46 +179,48 @@
 1. 파일을 업로드 할 수 있는 입력 필드가 만들어 진다.
 
 ### 1-2. Video 
-- video
-    - `video` 태그는 HTML5 에서는 다른 추가 플러그인 없이 비디오와 오디오의 미디어에 대한 재생이 가능하도록 지원해준다. 동영상 콘텐츠를 포함하기 위해 사용하며 `src`속성이나 `<source>`요소를 이용해 여러개의 동영상 소스를 표시 할 수 있고 브라우저에 가장 적절한 것을 선택해서 사용한다.
+- `video` 태그는 HTML5 에서는 다른 추가 플러그인 없이 비디오와 오디오의 미디어에 대한 재생이 가능하도록 지원해준다. 동영상 콘텐츠를 포함하기 위해 사용하며 `src`속성이나 `<source>`요소를 이용해 여러개의 동영상 소스를 표시 할 수 있고 브라우저에 가장 적절한 것을 선택해서 사용한다.
 
-      - `video` 사용 예
-        ```html
-        <video class="news-video" src="/media/stories.mp4" poster="/media/poster.jpg" controls preload="auto" autoplay>
-        ```
-    
-    - Attributes
-      속성|값|설명
-      -----|------|-----
-      src|URL|삽입할 동영상의 주소, 재생할 미디어의 URL을 나타낸다
-      height|px(숫자)|비디오 높이의 픽셀 값
-      width|px(숫자)|비디오 넓이의 픽셀 값
-      controls|"controls", "", -|비디오의 재생, 볼륨 등 제어 조절 장치를 보여주며,  "controls"나 공백이나 태그 안에 값 없이 controls만 적어줘도 적용된다.
-      muted|"muted", "", -|음소거, 비디오의 포함된 오디오를 음소거 할지 지정(기본값 false)
-      poster|URL|비디오가 로드되지 않고 있을때 처음에 표시될 이미지의 URL
-      loop|"loop", "", -|이 속성이 설정 되어 있으면 동영상을 계속 반복한다.
-      preload|"none", "metadata", "auto"|페이지를 읽을 때 미디어도 같이 읽어들여 재생을 준비한다.<br/>`none` : 비디오 파일을 로드하지 않음<br/>`metadata` : metadata만 로드 함<br/>`auto`: 전체 비디오 파일을 로드함
+  - `video` 사용 예
+    ```html
+    <video class="news-video" src="/media/stories.mp4" poster="/media/poster.jpg" controls preload="auto" autoplay>
+    ```
 
-    - `track` 태그  
-      트랙 엘리먼트는 미디어 요소(`audio`,`video`)의 자식 요소이며, 외국어에 대한 자막, 장애인들을 위한 자막, 스크린 리더가 읽는 글을 비디오나, 오디오에 추가를 해줄수 있도록 한다. vtt의 파일 확장자 명을 가진다.
-      
-      - `track` 사용 예
-        ```html
-        <video src="media/stories.mp4">
-        <track src="media/stories_ko.vtt" kind="captions" srclang="ko" label="korean Caption"">
-        <track src="media/stories_en.vtt" kind="captions" srclang="en" label="English Caption"">
-        </video>
-        ```
-      - Attributes
-        속성|설명
-        -----|-----
-        kind|텍스트 트랙의 종류를 정의한다.
-        src|텍스트 트랙의 데이터의 주소(.vtt 파일)를 정의한다. 이 속성은 반드시 정의가 되어야한다.
-        srclang|텍스트 트랙의 데이터의 언어를 정의한다.
-        label|브라우저가 사용 가능한 텍스트 트랙을 나열할 때 사용자가 읽을 수 있는 트랙제목.
-        default|기본 트랙을 정의.
-###1-3. CSS Image Sprites 기법
+- Attributes
 
+    `src` : 삽입할 동영상의 주소, 재생할 미디어의 URL을 나타낸다  
+    `height` : 비디오 높이의 픽셀 값
+    `width` : 비디오 넓이의 픽셀 값  
+    `controls` : 비디오의 재생, 볼륨 등 제어 조절 장치를 보여주며,  "controls"나 공백이나 태그 안에 값 없이 controls만 적어줘도 적용된다.  
+    `muted` : 음소거, 비디오의 포함된 오디오를 음소거 할지 지정(기본값 false)  
+    `poster` : 비디오가 로드되지 않고 있을때 처음에 표시될 이미지의 URL  
+    `loop` : 이 속성이 설정 되어 있으면 동영상을 계속 반복한다.  
+    `preload` : 페이지를 읽을 때 미디어도 같이 읽어들여 재생을 준비한다.
+
+      none : 비디오 파일을 로드하지 않음
+      metadata : metadata만 로드 함
+      auto: 전체 비디오 파일을 로드함
+         
+- `track` 태그  
+  트랙 엘리먼트는 미디어 요소(`audio`,`video`)의 자식 요소이며, 외국어에 대한 자막, 장애인들을 위한 자막, 스크린 리더가 읽는 글을 비디오나, 오디오에 추가를 해줄수 있도록 한다. vtt의 파일 확장자 명을 가진다.
+  
+  - `track` 사용 예
+    ```html
+    <video src="media/stories.mp4">
+    <track src="media/stories_ko.vtt" kind="captions" srclang="ko" label="korean Caption"">
+    <track src="media/stories_en.vtt" kind="captions" srclang="en" label="English Caption"">
+    </video>
+    ```
+  - Attributes
+
+      `kind`- 텍스트 트랙의 종류를 정의한다.  
+      `src` - 텍스트 트랙의 데이터의 주소(.vtt 파일)를 정의한다.   이 속성은 반드시 정의가 되어야한다.  
+      `srclang` - 텍스트 트랙의 데이터의 언어를 정의한다.  
+      `label` - 브라우저가 사용 가능한 텍스트 트랙을 나열할 때 사용자가 읽을 수 있는 트랙제목.  
+      `default` - 기본 트랙을 정의.
+
+### 1-3. CSS Image Sprites 기법
+ 
 - 아이콘은 img태그를 사용해도 되지만  대체텍스트가 없는 이미지이기  때문에 background 속성을 사용하여 배경에 이미지를 깔아주는 것을 권장한다. 
 
 - CSS sprites 기법을 사용하면 여러 개의 이미지파일을 모두 부르는것이 아니라 한 이미지파일로 통합하여 부르게 된다.  따라서 서버와의 요청 횟수가 줄어들어 로딩속도가 줄어들고 내려받는 이미지의 용량이 줄어들어 효율적이다.
