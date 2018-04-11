@@ -96,7 +96,7 @@ function add(x, y) { // 변수 `x`와 `y`가 정의됨
 }
 add(2, 3);
 console.log(x); // 에러!
-​````
+```
 > ReferenceError: x is not defined
     at eval:6:13
     at eval
@@ -141,7 +141,7 @@ add5(x);
 
 #### 어휘적 스코핑 (Lexical Scoping)
 
-​```js
+```js
 function add5(x) {
   // --- add5의 스코프
   const five = 5;
@@ -316,8 +316,8 @@ if (result === 6) alert('당신은 운이 좋군요');
 
 
 - 3개 이상의 경우의 수를 if ... else로 표현하려면 if ... else를 **중첩**시키면된다.
-- - if else 안에 if else를 넣거나
-- - `else if`를 통해 조건을 더 넣어준다.
+- if else 안에 if else를 넣거나
+- `else if`를 통해 조건을 더 넣어준다.
 ```js
 if(조건) {
  // 구문
