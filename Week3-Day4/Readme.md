@@ -151,11 +151,11 @@ CSS 디자인을 도와줍니다.<br/>
 이러한 문제들이 있습니다.
 
 <br/><br/>
-<strong style="color:salmon;">문제애 대한 대응 방법</strong>
+<strong style="color:salmon;">문제에 대한 대응 방법</strong>
 
 * srcset 과 sizes 속성
 
-처음 소개할 방법은 srcset 과 sizes 속성압나다.<br/>
+처음 소개할 방법은 srcset 과 sizes 속성입니다.<br/>
 이 방식은 HTML 의  `<img>`  태그에 새로운 속성을 추가하여<br/>
 반응형 이미지를 처리하는 방식으로 Apple 이 처음 제안하여 현재의 웹표준에 이른 방식입니다.<br/>
 
