@@ -1,8 +1,11 @@
 # 1.Today I Learned
 
 ## 함수 더 알아보기
+
 ---
-###객체로서의 함수
+
+### 객체로서의 함수
+
 함수는 `Function` 생성자로부터 생성되는 객체이다.
 ```js
 function func() {}
@@ -36,7 +39,7 @@ console.log(add.name); // add
 ---
 
 ### 주인없는 this
-this는 생성자, 메소드에서 객체를 가리킬 때 사용하는 키워드이다.
+`this`는 생성자, 메소드에서 객체를 가리킬 때 사용하는 키워드이다.
 - 생성자 - 새로 만들어주는 객체의 속성을 지정할 때
 - 메소드 - 객체의 속성에 접근할 때, 객체의 다른 메소드를 호출할 때
 
@@ -99,7 +102,7 @@ ES2015 모듈(`export`를 사용하는)을 이용해 작성된 코드는 항상 
 
 (바벨이나 타입스크립트 같은 트랜스 파일러를 통해 ES2105 모듈 방식으로 작성되므로 따로 신경써주지 않아도 된다.(리액트도 마찬가지))
 
-####  생성자와 메소드
+#### 생성자와 메소드
 
 - 생성자란 무엇인가? 
   - `new` 키워드를 앞에 붙여서 호출하는 함수
@@ -154,7 +157,8 @@ person.introduce();
 ES2015에 추가된 클래스를 사용하면 좀더 명확히 구분되는 형태로 객체를 만들어준다.
 
 ---
-###this 바꿔치기
+
+### this 바꿔치기
 
 - `this`는 때에 따라 다른 값을 가리킨다.  (호출되는 형태에 따라 다른 값을 가진다.) 
 
@@ -228,7 +232,8 @@ printGradeBoudn(...arr);
 
 ---
 
-###arguments와 나머지 매개변수(Rest Parameters)
+### arguments와 나머지 매개변수(Rest Parameters)
+
 - `function` 구문을 통해 생성된 함수가 호출될 때는, `arguments`라는 변수가 함수 내부에 자동으로 생성된다.
 
 - `arguments`는 유사 배열 객체(array-like object)이자 반복 가능한 객체(iterable object)로, 함수에 주어진 인수가 순서대로 저장되기 때문에 인덱스를 가지고 인수를 읽어오거나 `for...of`를 통해 순회할 수 있다.
@@ -400,7 +405,7 @@ console.log(person1.introduce()); // 안녕하세요, 입니다.
 const boundIntroduce = introduce.bind({name: '김승하'});
 console.log(boundIntroduce()); // 안녕하세요, 입니다.
 ```
-바깥쪽 this랑 똑같은 this가 된다.
+바깥쪽 `this`랑 똑같은 `this`가 된다.
 ```js
 function Person(name) {
   this.name = name;
@@ -475,6 +480,8 @@ console.log(getName2()); // 'mary'
 ```
 
 화살표 함수는 `bind`같은 추가 작업없이도 어떻게 사용되더라도 이미 `this`가 눈에 보이는 대로 이미 결정되어 있기 때문에 예상치 못한 `this`의 문제를(`this`가 다른것을 가리키지 않을까하는...) 고려하지 않아도 된다. 안심하고 호출할 수 있다.
+
+---
 
 ### 매개변수의 기본값 (Default Parameter)
 
