@@ -67,7 +67,6 @@ export default class App extends React.Component {
 ```
 
 
-
 ##### TodoPage.js
 
 - TodoProvider로  감싸준다.
@@ -93,7 +92,7 @@ export default class TodoPage extends Component {
 
 #### rendering 
 
-**rendering된다는 것은 화면을 그린다는 것이 아니다** 
+- **rendering된다는 것은 화면을 그린다는 것이 아니다** 
 
 - 컴포넌트 클래스로부터 생성되는 객체가 있다. 
 - 컴포넌트 렌더링 = 컴포넌트의 인스턴스 트리 구축 
@@ -103,7 +102,9 @@ export default class TodoPage extends Component {
 
 #### 로그아웃 버튼 만들기
 
-- 로그아웃 기능 : 1) 토큰을 지운다.  2) 페이지를 바꾼다.
+- 로그아웃 기능 
+  - 토큰을 지운다.  
+  - 페이지를 바꾼다.
 
 ##### UserContext.js
 
@@ -432,7 +433,7 @@ export default class LoginFormContainer extends React.Component {
 window.history.back();
 ```
 
-<br />
+
 
 `앞으로가기` 버튼과 동일하게 작동한다
 
@@ -441,7 +442,7 @@ window.history.forward();
 ```
 
 
-<br></br>
+
 
 #### 히스토리에서 특정 위치로 가기
 
@@ -472,7 +473,7 @@ var numberOfEntries = window.history.length;
 
 
 
-#####`pushState()` 메소드 
+##### `pushState()` 메소드 
 
 - history stack의  항목 하나를 추가한다. 
 - 주소가 바뀐다.
@@ -545,7 +546,7 @@ VM2068:1 {a: 3}
 
 
 
-### 1-3-2. Hash Change 
+#### 1-3-2. Hash Change 
 
 ```js
 window.addEventListener('hashchange', e => console.log(e))
